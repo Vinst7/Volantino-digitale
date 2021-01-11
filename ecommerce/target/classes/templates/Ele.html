@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/add-customer-style.css">
+<title>Elettronica</title>
+</head>
+<body>
+<h1 class="titoloEle" align="center" >ARTICOLI ELETTRONICA </p>
+<table align="center" class="tableEle">
+<form align="center" th:action ="@{/Ele}">
+			Cerca: <input type="text" name="keyword" id="keyword" size="60" th:value="${keyword}" required />
+    		&nbsp;
+    		<input type="submit" value="Cerca Prodotto" />
+    		&nbsp;
+    		<input type="button" value="Clean field" id="btnClear" onclick="clearSearch()" />
+		</form>
+		<p> </p>
+		
+<div align="center">
+	<script type="text/javascript">
+    function clearSearch() {
+        window.location = "[[@{/Ele}]]";
+    }
+	</script>
+</div>
+<hr>
+<p> </p>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Tipo</th>
+<th>Modello</th>
+<th>Prezzo</th>
+<th>Operazioni</th>
+</tr>
+</thead>
+
+<tr th:each="elettronica : ${elettronica}">
+<td th:text="${elettronica.marca}"></td>
+<td th:text="${elettronica.tipo}"></td>
+<td th:text="${elettronica.modello}"></td>
+<td th:text="${elettronica.prezzo}"></td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<td><a th:href="@{'/edit_Ele/' +${elettronica.id_ele}}">Edit</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a th:href="@{'/delete_Ele/' +${elettronica.id_ele}}" onclick="if (!(confirm('vuoi eliminare questo Prodotto?'))) return false">Delete</a>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

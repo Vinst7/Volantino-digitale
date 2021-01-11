@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/add-customer-style.css">
+<title>Abbigliamento</title>
+</head>
+<body>
+<h1 class="titoloAbb" align="center" >ARTICOLI ABBIGLIAMENTO </p>
+<table align="center" class="tableAbb">
+<form align="center" th:action ="@{/Abb}">
+			Cerca: <input type="text" name="keyword" id="keyword" size="60" th:value="${keyword}" required />
+    		&nbsp;
+    		<input type="submit" value="Cerca Prodotto" />
+    		&nbsp;
+    		<input type="button" value="Clean field" id="btnClear" onclick="clearSearch()" />
+		</form>
+		<p> </p>
+		
+<div align="center">
+	<script type="text/javascript">
+    function clearSearch() {
+        window.location = "[[@{/Abb}]]";
+    }
+	</script>
+</div>
+<hr>
+<p> </p>
+<thead>
+<tr>
+<th>Marca</th>
+<th>Tipo</th>
+<th>Taglia</th>
+<th>Colore</th>
+<th>Prezzo</th>
+<th>Operazioni</th>
+</tr>
+</thead>
+
+
+<tr th:each="abbigliamento : ${abbigliamento}">
+<td th:text="${abbigliamento.marca}"></td>
+<td th:text="${abbigliamento.tipo}"></td>
+<td th:text="${abbigliamento.taglia}"></td>
+<td th:text="${abbigliamento.colore}"></td>
+<td th:text="${abbigliamento.prezzo}"></td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<td><a th:href="@{'/edit_Abb/' +${abbigliamento.id_abb}}">Edit</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a th:href="@{'/delete_Abb/' +${abbigliamento.id_abb}}"onclick="if (!(confirm('vuoi eliminare questo Prodotto?'))) return false">Delete</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+</body>
+</html>

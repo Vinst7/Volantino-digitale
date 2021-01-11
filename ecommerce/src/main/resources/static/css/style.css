@@ -1,0 +1,240 @@
+html {
+background: white;
+}
+
+body {
+max-width: 1920px;
+min-width: 1080px;
+margin: 0px auto;
+background: #ffffff;
+padding:0px 5px;
+}
+
+.categorie p { display: inline-block; max-width: 50%; }
+.categorie p:nth-child(1) { float:center; }
+.categorie p:nth-child(2) { float:center; }
+.categorie p:nth-child(2) { float:center; }
+
+.titoloEle{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #ff9a35;
+}
+
+.tableEle {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+border-collapse: separate;
+border-spacing: 5px;
+background: #ffffff;
+color: #000000;
+border: 16px solid #ff9a35;
+border-radius: 20px;
+}
+
+.tableEle th {
+  border-top: 1px solid #777777;	
+  border-bottom: 1px solid #777777; 
+  box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+  background: linear-gradient(#9595b6, #5a567f);
+  color: white;
+  padding: 10px 15px;
+  position: relative;
+}
+.tableEle th:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.tableEle tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.tableEle th:first-child {
+  border-left: 1px solid #777777;	
+  border-bottom:  1px solid #777777;
+  box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableEle th:last-child {
+  border-right: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableEle td {
+  border: 1px solid #e3eef7;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.tableEle tbody:hover td {
+  color: transparent;
+  text-shadow: 0 0 3px #a09f9d;
+}
+.tableEle tbody:hover tr:hover td {
+  color: #444444;
+  text-shadow: none;
+}
+
+<!--  -->
+
+.titoloLib{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #ff9a35;
+}
+
+.tableLib {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+border-collapse: separate;
+border-spacing: 5px;
+background: #ffffff;
+color: #000000;
+border: 16px solid #ff9a35;
+border-radius: 20px;
+}
+
+.tableLib th {
+  border-top: 1px solid #777777;	
+  border-bottom: 1px solid #777777; 
+  box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+  background: linear-gradient(#9595b6, #5a567f);
+  color: white;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.tableLib th:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.tableLib tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.tableLib th:first-child {
+  border-left: 1px solid #777777;	
+  border-bottom:  1px solid #777777;
+  box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableLib th:last-child {
+  border-right: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableLib td {
+  border: 1px solid #e3eef7;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.tableLib tbody:hover td {
+  color: transparent;
+  text-shadow: 0 0 3px #a09f9d;
+}
+.tableLib tbody:hover tr:hover td {
+  color: #444444;
+  text-shadow: none;
+}
+
+<!-- -->
+
+.titoloAbb{
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+color: #ff9a35;
+}
+
+.tableAbb {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+text-align: center;
+border-collapse: separate;
+border-spacing: 5px;
+background: #ffffff;
+color: #000000;
+border: 16px solid #ff9a35;
+border-radius: 20px;
+}
+
+.tableAbb th {
+  border-top: 1px solid #777777;	
+  border-bottom: 1px solid #777777; 
+  box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+  background: linear-gradient(#9595b6, #5a567f);
+  color: white;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.tableAbb th:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.tableAbb tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.tableAbb th:first-child {
+  border-left: 1px solid #777777;	
+  border-bottom:  1px solid #777777;
+  box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableAbb th:last-child {
+  border-right: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.tableAbb td {
+  border: 1px solid #e3eef7;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.tableAbb tbody:hover td {
+  color: transparent;
+  text-shadow: 0 0 3px #a09f9d;
+}
+.tableAbb tbody:hover tr:hover td {
+  color: #444444;
+  text-shadow: none;
+}
+.intestazione h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #ff9a35; 
+}
+
+.intestazione h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #ff9a35; 
+}
+.categorie p{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #ff9a35; 
+}
+.inserimento p { display: inline-block; max-width: 50%; font-size:30px; }
+.inserimento p:nth-child(1) { float:center; }
+.inserimento p:nth-child(2) { float:center; }
+.inserimento p:nth-child(2) { float:center; }
+
+.newObj{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	color: #ff9a35; 
+}
+
+
+
+
+
+
+

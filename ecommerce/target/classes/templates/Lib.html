@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/add-customer-style.css">
+<title>Abbigliamento</title>
+</head>
+<body>
+<h1 class="titoloLib" align="center" >LIBRI </p>
+<table align="center" class="tableLib">
+<form align="center" th:action ="@{/Lib}">
+			Cerca: <input type="text" name="keyword" id="keyword" size="60" th:value="${keyword}" required />
+    		&nbsp;
+    		<input type="submit" value="Cerca Prodotto" />
+    		&nbsp;
+    		<input type="button" value="Clean field" id="btnClear" onclick="clearSearch()" />
+		</form>
+		<p> </p>
+		
+<div align="center">
+	<script type="text/javascript">
+    function clearSearch() {
+        window.location = "[[@{/Lib}]]";
+    }
+	</script>
+</div>
+<hr>
+<p> </p>
+<thead>
+<tr>
+<th>Autore</th>
+<th>Titolo</th>
+<th>Genere</th>
+<th>Prezzo</th>
+<th>Operazioni</th>
+</tr>
+</thead>
+
+<tr th:each="libri : ${libri}">
+<td th:text="${libri.autore}"></td>
+<td th:text="${libri.titolo}"></td>
+<td th:text="${libri.genere}"></td>
+<td th:text="${libri.prezzo}"></td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<td><a th:href="@{'/edit_Lib/' +${libri.id_lib}}">Edit</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a th:href="@{'/delete_Lib/' +${libri.id_lib}}" onclick="if (!(confirm('vuoi eliminare questo Prodotto?'))) return false">Delete</a> 
+</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/add-customer-style.css">
+<title>Edit Elettronica</title>
+</head>
+<body>
+	<div align="center" class = "newObj">
+	<h1>Modifica Elettronuca</h1>
+	<form action="#" th:action="@{/saveEle}" th:object="${elettronica}" method="post">
+	<table border="0" cellpadding=10>
+	<tr> 
+	
+	<td> ID:</td>
+	<td><input type="text" th:field="*{id_ele}" readonly="readonly" /> <td> <br>
+	<td> Marca:</td>
+	<td><input type="text" th:field="*{marca}" /> <td> <br>
+	<td> Tipo </td>
+		<td><input type="text" th:field="*{tipo}" /> <td> <br>
+	<td> Modello </td>
+		<td><input type="text" th:field="*{modello}" /> <td> <br>
+	<td> Prezzo </td>
+		<td><input type="text" th:field="*{prezzo}" /> <td> <br>
+	
+	
+	<tr><td colspan="2"><button type="submit" value="clicca qui"/>SALVA</td> 
+	</table>
+	
+	
+	
+	</form>
+	
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>
